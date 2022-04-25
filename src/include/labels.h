@@ -4,3 +4,6 @@
 
 #define OS_LABEL "OS: "
 #define HOST_LABEL "Host: "
+#define KERNEL_LABEL "Kernel: "
+#define UPTIME_LABEL "Uptime: "
+#define PACKAGES_LABEL "Packages: "
