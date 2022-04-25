@@ -7,3 +7,5 @@
 #define KERNEL_LABEL "Kernel: "
 #define UPTIME_LABEL "Uptime: "
 #define PACKAGES_LABEL "Packages: "
+#define CPU_LABEL "CPU:"
+#define MEMORY_LABEL "Memory: "
