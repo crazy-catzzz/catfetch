@@ -4,11 +4,12 @@
 
 using namespace std;
 
-int main() {
+int main(int argc, char **argv) {
 
     cout << OS_LABEL << getOS() << endl;
-    cout << HOST_LABEL << getHost() << endl;
-    cout << KERNEL_LABEL << "fuck u" << endl;
+    cout << HOSTNAME_LABEL << getHostName() << endl;
+    cout << HOST_LABEL << "fuck u" << endl;
+    cout << KERNEL_LABEL << getKernel() << endl;
     cout << UPTIME_LABEL << "fuck u" << endl;
     cout << PACKAGES_LABEL << "fuck u" << endl;
 

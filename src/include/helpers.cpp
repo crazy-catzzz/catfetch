@@ -5,6 +5,8 @@
 #include <sstream>
 #include <vector>
 
+#include <sys/utsname.h>
+
 std::string getOS() {
     std::string str, seg, os;
     
@@ -17,7 +19,7 @@ std::string getOS() {
     return os;
 }
 
-std::string getHost() {
+std::string getHostName() {
     std::string hostname;
 
     std::ifstream readStream("/etc/hostname");
@@ -25,4 +27,11 @@ std::string getHost() {
     readStream.close();
 
     return hostname;
+}
+
+std::string getKernel() {
+    utsname info;
+    uname(&info);
+
+    return info.release;
 }
