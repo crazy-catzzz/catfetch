@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
     cout << endl;
 
     cout << OS_LABEL << getOS() << endl;
-    cout << HOST_LABEL << "fuck u" << endl;
+    cout << HOST_LABEL << getHost() << endl;
     cout << KERNEL_LABEL << getKernel() << endl;
     cout << UPTIME_LABEL << "fuck u" << endl;
     cout << PACKAGES_LABEL << "fuck u" << endl;

@@ -21,6 +21,16 @@ std::string getOS() {
     return os;
 }
 
+std::string getHost() {
+    std::string host;
+
+    std::ifstream readStream("/sys/devices/virtual/dmi/id/product_name");
+    std::getline(readStream, host);
+    readStream.close();
+
+    return host;
+}
+
 std::string getHostName() {
     std::string hostname;
 
