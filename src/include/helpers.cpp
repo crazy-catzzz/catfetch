@@ -57,8 +57,8 @@ std::string getKernel() {
     return info.release;
 }
 
-std::vector<std::string> getUptime() {
-    std::vector<std::string> uptime;
+std::vector<int> getUptime() {
+    std::vector<int> uptime;
     struct sysinfo info;
     sysinfo(&info);
 
@@ -69,10 +69,10 @@ std::vector<std::string> getUptime() {
     int seconds = uptimeSecs - minutes*60 - hours*3600 - days*86400;
 
     // Add uptime to vector
-    uptime.push_back(std::to_string(days));
-    uptime.push_back(std::to_string(hours));
-    uptime.push_back(std::to_string(minutes));
-    uptime.push_back(std::to_string(seconds));
+    uptime.push_back(days);
+    uptime.push_back(hours);
+    uptime.push_back(minutes);
+    uptime.push_back(seconds);
 
     return uptime;
 }
@@ -82,10 +82,10 @@ std::string getCPUmodel() {
     std::string model;
     std::vector<std::string> split;
 
-    std::ifstream readStream("/proc/cpuinfo");
-    gotoLine_r(readStream, 4);
-    std::getline(readStream, model);
-    readStream.close();
+    std::ifstream readStream("/proc/cpuinfo");  // Open /proc/cpuinfo
+    gotoLine_r(readStream, 4);                  // Go to line 4 in /proc/cpuinfo
+    std::getline(readStream, model);            // Get current line and put it in model
+    readStream.close();                         // Close /proc/cpuinfo
 
     split = stringSplit(model, ':');
     model = split.at(1);

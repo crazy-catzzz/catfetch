@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 #include <fstream>
 
 std::ifstream& gotoLine_r(std::ifstream &file, int line);

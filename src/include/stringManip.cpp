@@ -1,4 +1,5 @@
 #include "./stringManip.h"
+
 #include <sstream>
 
 std::vector<std::string> stringSplit(std::string toSplit, char separator) {

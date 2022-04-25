@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+
 #include "./include/helpers.h"
 #include "./include/labels.h"
 
@@ -7,10 +8,15 @@ using namespace std;
 
 int main(int argc, char **argv) {
 
-    std::vector<std::string> uptime = getUptime();
+    std::vector<int> uptime = getUptime();  /* Uptime vector
+                                                    *  0: Days
+                                                    *  1: Hours
+                                                    *  2: Minutes
+                                                    *  3: Seconds
+                                                    */
 
-    cout << getUser() << '@' << getHostName() << endl;
-    for (int i = 0; i < 10; i++) cout << '-';
+    cout << getUser() << '@' << getHostName() << endl; // Print a title in the format user@hostname
+    for (int i = 0; i < 10; i++) cout << '-';          // Print separator
     cout << endl;
 
     cout << OS_LABEL << getOS() << endl;
