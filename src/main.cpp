@@ -6,8 +6,11 @@ using namespace std;
 
 int main(int argc, char **argv) {
 
+    cout << getUser() << '@' << getHostName() << endl;
+    for (int i = 0; i < 10; i++) cout << '-';
+    cout << endl;
+
     cout << OS_LABEL << getOS() << endl;
-    cout << HOSTNAME_LABEL << getHostName() << endl;
     cout << HOST_LABEL << "fuck u" << endl;
     cout << KERNEL_LABEL << getKernel() << endl;
     cout << UPTIME_LABEL << "fuck u" << endl;

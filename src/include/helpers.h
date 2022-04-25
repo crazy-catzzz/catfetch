@@ -7,4 +7,6 @@ std::string getHost();      // Gets host machine
 
 std::string getHostName();  // Gets hostname from /etc/hostname
 
+std::string getUser();      // Gets user using getlogin(), pretty useless tbh
+
 std::string getKernel();    // Gets kernel using uname()
