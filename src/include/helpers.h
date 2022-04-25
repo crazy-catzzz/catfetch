@@ -15,3 +15,5 @@ std::string getKernel();        // Gets kernel using uname()
 std::vector<int> getUptime();   // Gets uptime from sysinfo, divides it into days, hours, minutes and seconds, then converts it to std::string and puts it in a vector
 
 std::string getCPUmodel();      // Gets CPU model
+
+std::vector<long> getRAMinfo();               // Gets RAM info using sysinfo

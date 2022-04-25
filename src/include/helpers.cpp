@@ -92,3 +92,27 @@ std::string getCPUmodel() {
 
     return model;
 }
+
+std::vector<long> getRAMinfo() {
+    std::vector<long> raminfo;
+    unsigned long free;
+    unsigned long used;
+    unsigned long total;
+
+    std::ifstream readStream("/proc/meminfo");
+    std::string token;
+    while (readStream >> token) {
+        if (token == "MemTotal:")
+            readStream >> total;
+        
+        if (token == "MemAvailable:")
+            readStream >> free;
+    }
+
+    used = total - free;
+
+    raminfo.push_back(total/1024);
+    raminfo.push_back(used/1024);
+
+    return raminfo;
+}
