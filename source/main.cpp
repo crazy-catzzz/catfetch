@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
 
-#include "./include/helpers.h"
-#include "./include/labels.h"
+#include "../include/helpers.h"
+#include "../include/labels.h"
 
 using namespace std;
 

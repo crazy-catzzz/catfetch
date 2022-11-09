@@ -1,6 +1,6 @@
-#include "./helpers.h"
-#include "./stringManip.h"
-#include "./fileManip.h"
+#include "../include/helpers.h"
+#include "../include/stringManip.h"
+#include "../include/fileManip.h"
 
 #include <string.h>
 #include <fstream>

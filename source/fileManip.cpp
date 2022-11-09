@@ -1,4 +1,4 @@
-#include "./fileManip.h"
+#include "../include/fileManip.h"
 #include <limits>
 
 std::ifstream& gotoLine_r(std::ifstream &file, int line) {

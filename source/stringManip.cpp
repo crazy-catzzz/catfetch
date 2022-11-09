@@ -1,4 +1,4 @@
-#include "./stringManip.h"
+#include "../include/stringManip.h"
 
 #include <sstream>
 
