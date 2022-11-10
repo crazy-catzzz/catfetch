@@ -13,7 +13,7 @@ CXX_SRC_FILES	:= $(wildcard $(addsuffix /*.cpp ,$(SOURCE)))
 CC_SRC_FILES	:= $(wildcard $(addsuffix /*.c ,$(SOURCE)))
 
 all:
-	mkdir $(OUT)
+	mkdir -p $(OUT)
 	$(CXX) $(CC_SRC_FILES) $(CXX_SRC_FILES) -o $(OUT)/$(TARGET_NAME) -I$(INCLUDE) $(LDFLAGS)
 
 clean:
