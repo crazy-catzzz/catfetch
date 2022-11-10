@@ -6,7 +6,7 @@ TARGET_NAME	:= catfetch
 INCLUDE 	:= include
 SOURCE		:= source
 OUT			:= out
-INSTALLDIR	:= $(HOME)/.local/bin	# /usr/bin and /usr/local/bin need more permissions
+INSTALLDIR	:= $(HOME)/.local/bin
 
 # Source files
 CXX_SRC_FILES	:= $(wildcard $(addsuffix /*.cpp ,$(SOURCE)))
