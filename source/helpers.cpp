@@ -116,3 +116,25 @@ std::vector<long> getRAMinfo() {
 
     return raminfo;
 }
+
+std::string getPackageCount() {
+    FILE *in;
+    char buff[512];
+
+    // Arch specific code, will have to implement something to make it work on Debian and derivates too
+    if (!(in = popen("pacman -Q", "r"))) {
+        return "error";
+    }
+    
+    int count = 0;
+    while(fgets(buff, sizeof(buff), in) != NULL) {
+        //std::cout << buff;
+        count++;
+    }
+    pclose(in);
+
+    std::string ret = std::to_string(count);
+    ret.append(" (pacman)");
+
+    return ret;
+}

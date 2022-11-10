@@ -16,4 +16,6 @@ std::vector<int> getUptime();   // Gets uptime from sysinfo, divides it into day
 
 std::string getCPUmodel();      // Gets CPU model
 
-std::vector<long> getRAMinfo();               // Gets RAM info using sysinfo
+std::vector<long> getRAMinfo(); // Gets RAM info using sysinfo
+
+std::string getPackageCount();  // Counts installed packages
